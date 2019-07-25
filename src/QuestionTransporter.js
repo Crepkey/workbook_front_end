@@ -11,6 +11,7 @@ export default class questionTransporter extends Component{
             answer: null,
             tags: null,
             room: null,
+            hint: false,
             error: null
         }
     }
@@ -39,33 +40,21 @@ export default class questionTransporter extends Component{
         console.log('render');
         return (
             <div>
-                <h1>This is HOME</h1>
-                <ul>
+                <h1>LEARNING MODE</h1>
+
                     {
                         this.state.error !== null &&
-                        <li>Sorry No data available</li>
-                    }
-                    {
-                        this.state.questionID !== null &&
-                        <li>{this.state.questionID}</li>
+                        <div>Sorry No data available</div>
                     }
                     {
                         this.state.questionText !== null &&
-                        <li>{this.state.questionText}</li>
+                        <div>{this.state.questionText}</div>
                     }
+                    <div><p><button type="button">Click here for HINT</button></p></div>
                     {
-                        this.state.answer !== null &&
-                        <li>{this.state.answer}</li>
+                        this.state.hint === true &&
+                        <div>{this.state.answer}</div>
                     }
-                    {
-                        this.state.tags !== null &&
-                        <li>{this.state.tags}</li>
-                    }
-                    {
-                        this.state.room !== null &&
-                        <li>{this.state.room}</li>
-                    }
-                </ul>
                 {this.state.error &&
                 <h3>{this.state.error}</h3>
                 }
