@@ -32,6 +32,10 @@ export default class AddQuestion extends Component {
 
     render() {
         return (
+            <div>
+            <p>
+                <h1 className="App-header">ADD NEW QUESTION</h1>
+            </p>
             <form onSubmit={this.handleSubmit}>
                 <p><label htmlFor="questionText">Enter new question</label><br/>
                 <textarea id="questionText" name="questionText"/></p>
@@ -47,8 +51,9 @@ export default class AddQuestion extends Component {
                     <option value="ADVANCED">Advanced</option>
                 </select></p>
 
-                <button id="check-solution">Send data!</button>
+                <button id="send-question">Send data!</button>
             </form>
+            </div>
         );
     }
 }

@@ -63,7 +63,7 @@ export default class questionTransporter extends Component{
                         </div>
                     {
                         this.state.hint === true &&
-                        <div id="answer">{this.state.answer}</div>
+                        <div id="answer-border">{this.state.answer}</div>
                     }
                 {this.state.error &&
                 <h3>{this.state.error}</h3>

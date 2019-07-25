@@ -31,7 +31,8 @@ function App() {
 function Home() {
     return (
         <div>
-            <h2>Home</h2>
+            <h1>Home</h1>
+            <h2 class="align-center">If you really hate learning the theoretical curriculum, you are in the right place</h2>
         </div>
     );
 }
