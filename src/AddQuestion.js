@@ -9,40 +9,36 @@ export default class AddQuestion extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const data = {
-            questionText: 'YYYYYYYYY',
-            answer: 'WHAT',
-            tags: [
-                'OOP',
-                'JAVA'
-            ],
-            room: 'OOP'
-        };
+        const formData = new FormData(event.target);
 
+        let jsonData = {};
+
+        for (const [key, value]  of formData) {
+            jsonData[key] = value;
+        }
 
         fetch('http://localhost:8080/question/add', {
             method: 'POST',
-            mode: 'no-cors',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
 
-            body: JSON.stringify(data)
+            body: JSON.stringify(jsonData)
         })
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                {/*<label htmlFor="questionText">Enter new question</label>*/}
-                {/*<input id="questionText" name="questionText" type="text" /><br/>*/}
+                <label htmlFor="questionText">Enter new question</label>
+                <input id="questionText" name="questionText" type="text" /><br/>
 
-                {/*<label htmlFor="answer">Enter the right answer</label>*/}
-                {/*<input id="answer" name="answer" type="text" /><br/>*/}
+                <label htmlFor="answer">Enter the right answer</label>
+                <input id="answer" name="answer" type="text" /><br/>
 
-                {/*<label htmlFor="room">Choose room for the question</label>*/}
-                {/*<input id="room" name="room" type="text" /><br/>*/}
+                <label htmlFor="room">Choose room for the question</label>
+                <input id="room" name="room" type="text" /><br/>
 
                 <button>Send data!</button>
             </form>
