@@ -16,6 +16,10 @@ export default class questionTransporter extends Component{
         }
     }
 
+    showHINT = () => {
+        this.setState({hint: true});
+    };
+
     buildState =(data)=>{
         console.log(data);
         this.setState({questionID: data.questionID});
@@ -50,7 +54,7 @@ export default class questionTransporter extends Component{
                         this.state.questionText !== null &&
                         <div>{this.state.questionText}</div>
                     }
-                    <div><p><button type="button">Click here for HINT</button></p></div>
+                    <div><p><button type="button" onClick={this.showHINT}>Click here for HINT</button></p></div>
                     {
                         this.state.hint === true &&
                         <div>{this.state.answer}</div>
