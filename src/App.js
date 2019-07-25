@@ -12,9 +12,9 @@ function App() {
         <Router>
             <div>
 
-                <button onClick="window.location.href='./'">Home</button>
-                <button onClick="window.location.href='./add-question'">Add new question</button>
-                <button onClick="window.location.href='./learning-mode'">Learning mode</button>
+                <button onClick={ ()=> {window.location.href='./'} }>Home</button>
+                <button onClick={ ()=> {window.location.href='./add-question'} }>Add new question</button>
+                <button onClick={ ()=> {window.location.href='./learning-mode'} }>Learning mode</button>
 
                 <Route exact path="/" component={Home} />
                 <Route path="/add-question" component={AddAQuestion} />
@@ -25,6 +25,8 @@ function App() {
     );
 }
 
+
+/*Components obtaining*/
 function Home() {
     return (
         <div>
@@ -36,7 +38,7 @@ function Home() {
 function AddAQuestion() {
     return (
         <div>
-        <AddQuestion/>
+            <AddQuestion/>
         </div>
     );
 }
