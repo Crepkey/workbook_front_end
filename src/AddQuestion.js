@@ -25,20 +25,27 @@ export default class AddQuestion extends Component {
             },
 
             body: JSON.stringify(jsonData)
-        })
+        }).then(res => res.json())
+            .then(response => console.log('Success:', JSON.stringify(response)))
+            .catch(error => console.error('Error:', error))
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <label htmlFor="questionText">Enter new question</label>
-                <input id="questionText" name="questionText" type="text" /><br/>
+                <p><label htmlFor="questionText">Enter new question</label><br/>
+                <textarea id="questionText" name="questionText"/></p>
 
-                <label htmlFor="answer">Enter the right answer</label>
-                <input id="answer" name="answer" type="text" /><br/>
+                <p><label htmlFor="answer">Enter the right answer</label><br/>
+                <textarea id="answer" name="answer"/></p>
 
-                <label htmlFor="room">Choose room for the question</label>
-                <input id="room" name="room" type="text" /><br/>
+                <p><label htmlFor="room">Choose room for the question</label><br/>
+                <select id="room" name="room">
+                    <option value="PROGBASICS">Progbasics</option>
+                    <option value="WEB">Web</option>
+                    <option value="OOP">OOP</option>
+                    <option value="ADVANCED">Advanced</option>
+                </select></p>
 
                 <button>Send data!</button>
             </form>
