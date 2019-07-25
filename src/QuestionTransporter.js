@@ -44,7 +44,9 @@ export default class questionTransporter extends Component{
         console.log('render');
         return (
             <div>
-                <h1>LEARNING MODE</h1>
+                <p>
+                <h1 class="App-header">LEARNING MODE</h1>
+                </p>
 
                     {
                         this.state.error !== null &&
@@ -52,16 +54,16 @@ export default class questionTransporter extends Component{
                     }
                     {
                         this.state.questionText !== null &&
-                        <div>{this.state.questionText}</div>
+                        <div><h2>{this.state.questionText}</h2></div>
                     }
                         <div>
                             <p>
-                                <button type="button" onClick={this.showHINT}>Click here for HINT</button>
+                                <button id="check-solution" type="button" onClick={this.showHINT}>Click here for HINT</button>
                             </p>
                         </div>
                     {
                         this.state.hint === true &&
-                        <div>{this.state.answer}</div>
+                        <div id="answer">{this.state.answer}</div>
                     }
                 {this.state.error &&
                 <h3>{this.state.error}</h3>

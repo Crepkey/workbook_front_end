@@ -47,7 +47,7 @@ export default class AddQuestion extends Component {
                     <option value="ADVANCED">Advanced</option>
                 </select></p>
 
-                <button>Send data!</button>
+                <button id="check-solution">Send data!</button>
             </form>
         );
     }

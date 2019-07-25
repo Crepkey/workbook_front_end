@@ -7,14 +7,15 @@ import './App.css';
 import QuestionTransporter from "./QuestionTransporter";
 import AddQuestion from './AddQuestion';
 
+
 function App() {
     return (
         <Router>
             <div>
 
-                <button onClick={ ()=> {window.location.href='./'} }>Home</button>
-                <button onClick={ ()=> {window.location.href='./add-question'} }>Add new question</button>
-                <button onClick={ ()=> {window.location.href='./learning-mode'} }>Learning mode</button>
+                <button id="home-button" onClick={ ()=> {window.location.href='./'} }>Home</button>
+                <button id="add-question-button" onClick={ ()=> {window.location.href='./add-question'} }>Add new question</button>
+                <button id="learning-mode-button" onClick={ ()=> {window.location.href='./learning-mode'} }>Learning mode</button>
 
                 <Route exact path="/" component={Home} />
                 <Route path="/add-question" component={AddAQuestion} />
