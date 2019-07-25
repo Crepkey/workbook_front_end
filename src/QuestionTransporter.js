@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 
-export default class Home extends Component{
+export default class questionTransporter extends Component{
 
     constructor(){
         super();
@@ -15,7 +15,7 @@ export default class Home extends Component{
         }
     }
 
-    buildList =(data)=>{
+    buildState =(data)=>{
         console.log(data);
         this.setState({questionID: data.questionID});
         this.setState({questionText: data.questionText});
@@ -29,7 +29,7 @@ export default class Home extends Component{
         let url = 'http://localhost:8080/question/random';
         fetch(url)
             .then(response => response.json())
-            .then(this.buildList)
+            .then(this.buildState)
             .catch(error => {
                 this.setState({error});
             })
