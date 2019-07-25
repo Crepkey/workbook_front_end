@@ -10,25 +10,25 @@ export default class AddQuestion extends Component {
     handleSubmit(event) {
         event.preventDefault();
         const data = {
-            questionText: "YYYYYYYYY",
-            answer: "WHAT",
+            questionText: 'YYYYYYYYY',
+            answer: 'WHAT',
             tags: [
-                "OOP",
-                "JAVA"
+                'OOP',
+                'JAVA'
             ],
-            room: "OOP"
+            room: 'OOP'
         };
+
 
         fetch('http://localhost:8080/question/add', {
             method: 'POST',
             headers: {
+                'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
 
             body: JSON.stringify(data)
-        }).then(res => res.json())
-            .then(response => console.log('Success:', JSON.stringify(response)))
-            .catch(error => console.error('Error:', error));
+        })
     }
 
     render() {
