@@ -22,7 +22,6 @@ export default class AddQuestion extends Component {
 
         fetch('http://localhost:8080/question/add', {
             method: 'POST',
-            mode: 'no-cors',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
