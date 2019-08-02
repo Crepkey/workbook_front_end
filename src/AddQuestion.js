@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 
 export default class AddQuestion extends Component {
+
     constructor() {
         super();
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -13,7 +14,7 @@ export default class AddQuestion extends Component {
 
         let jsonData = {};
 
-        for (const [key, value]  of formData) {
+        for (const [key, value] of formData) {
             jsonData[key] = value;
         }
 
@@ -33,26 +34,38 @@ export default class AddQuestion extends Component {
     render() {
         return (
             <div>
-            <p>
-                <h1 className="App-header">ADD NEW QUESTION</h1>
-            </p>
-            <form onSubmit={this.handleSubmit}>
-                <p><label htmlFor="questionText">Enter new question</label><br/>
-                <textarea id="questionText" name="questionText"/></p>
+                <p>
+                    <h1 className="App-header">ADD NEW QUESTION</h1>
+                </p>
+                <form onSubmit={this.handleSubmit}>
+                    <p>
+                        <p>
+                            <label htmlFor="questionText">Enter new question</label>
+                        </p>
+                        <textarea id="questionText" name="questionText"/>
+                    </p>
 
-                <p><label htmlFor="answer">Enter the right answer</label><br/>
-                <textarea id="answer" name="answer"/></p>
+                    <p>
+                        <p>
+                            <label htmlFor="answer">Enter the right answer</label>
+                        </p>
+                        <textarea id="answer" name="answer"/>
+                    </p>
 
-                <p><label htmlFor="room">Choose room for the question</label><br/>
-                <select id="room" name="room">
-                    <option value="PROGBASICS">Progbasics</option>
-                    <option value="WEB">Web</option>
-                    <option value="OOP">OOP</option>
-                    <option value="ADVANCED">Advanced</option>
-                </select></p>
+                    <p>
+                        <p>
+                            <label htmlFor="room">Choose room for the question</label>
+                        </p>
+                        <select id="room" name="room">
+                            <option value="PROGBASICS">Progbasics</option>
+                            <option value="WEB">Web</option>
+                            <option value="OOP">OOP</option>
+                            <option value="ADVANCED">Advanced</option>
+                        </select>
+                    </p>
 
-                <button id="send-question">Send data!</button>
-            </form>
+                    <button id="send-question">Send data!</button>
+                </form>
             </div>
         );
     }
