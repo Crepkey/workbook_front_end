@@ -98,8 +98,6 @@ h2 {
 body{
   background: #282c34 url("./static/large_logo_transparent.png") no-repeat center;
   height: 700px;
-  animation-name: App-logo-spin;
-  animation-duration: 1s;
 }
 
 
@@ -126,13 +124,4 @@ select {
 
 .align-center {
   text-align: center;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
