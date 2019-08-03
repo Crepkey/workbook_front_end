@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 
-export default class questionTransporter extends Component{
+export default class learningMode extends Component{
 
     constructor(){
         super();

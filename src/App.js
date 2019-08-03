@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 
 /*Components*/
 import './App.css';
-import QuestionTransporter from "./QuestionTransporter";
+import QuestionTransporter from "./LearningMode";
 import AddQuestion from './AddQuestion';
 import Button from "./components/button";
 
