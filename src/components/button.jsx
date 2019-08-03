@@ -13,7 +13,8 @@ export default class Button extends Component {
             window.location.href=this.state.href
         }
         else{
-            window.location.href= window.location.href
+            let newHref = window.location.href;
+            window.location.href= newHref
         }
     };
 

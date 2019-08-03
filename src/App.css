@@ -1,4 +1,6 @@
-#home-button {
+/*-------------------------------------------------------BUTTONS------------------------------------------------------*/
+
+.turquoise-button {
   float: right;
   margin: 10px;
   padding: 5px 30px;
@@ -13,7 +15,7 @@
   text-shadow: 1px 1px 1px black;
 }
 
-#learning-mode-button {
+.green-button {
   float: left;
   margin: 10px;
   padding: 5px 30px;
@@ -28,7 +30,7 @@
   text-shadow: 1px 1px 1px black;
 }
 
-#add-question-button{
+.dark-blue-button{
   float: left;
   margin: 10px;
   padding: 5px 30px;
@@ -43,22 +45,6 @@
   text-shadow: 1px 1px 1px black;
 }
 
-#check-solution {
-  margin: 10px;
-  padding: 5px 30px;
-  border: 1px solid #720005;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 1px 6px 12px #ee5057, inset -1px -10px 5px #8e0b08, 1px 2px 1px black;
-  -moz-box-shadow: inset 1px 6px 12px #ee5057, inset -1px -10px 5px #8e0b08, 1px 2px 1px black;
-  box-shadow: inset 1px 6px 12px #ee5057, inset -1px -10px 5px #8e0b08, 1px 2px 1px black;
-  background-color: #8e0b08;
-  font-size: large;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
-}
-
-
 .red-button{
   padding: 5px 30px;
   border: 1px solid #720005;
@@ -72,6 +58,8 @@
   text-shadow: 1px 1px 1px black;
   text-align: center;
 }
+
+/*------------------------------------------------------OTHERS--------------------------------------------------------*/
 
 h1 {
   padding: 80px;

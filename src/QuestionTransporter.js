@@ -17,7 +17,6 @@ export default class questionTransporter extends Component{
     }
 
     buildState =(data)=>{
-        console.log(data);
         this.setState({questionID: data.questionID});
         this.setState({questionText: data.questionText});
         this.setState({answer: data.answer});
@@ -26,7 +25,6 @@ export default class questionTransporter extends Component{
     };
 
     componentDidMount(){
-        console.log('did mount');
         let url = 'http://localhost:8080/question/random';
         fetch(url)
             .then(response => response.json())
@@ -37,13 +35,9 @@ export default class questionTransporter extends Component{
     }
 
     render(){
-        console.log('render');
         return (
             <div>
-                <p>
-                <h1 class="App-header">LEARNING MODE</h1>
-                </p>
-
+                <h1 className="App-header">LEARNING MODE</h1>
                     {
                         this.state.error !== null &&
                         <div>Sorry No data available</div>
@@ -53,11 +47,11 @@ export default class questionTransporter extends Component{
                         <div><h2>{this.state.questionText}</h2></div>
                     }
                         <div>
-                            <p>
-                                <button id="check-solution" type="button" onClick={ () => this.setState({hint: true}) }>
+                                <button id="check-solution"
+                                        className="red-button"
+                                        onClick={ () => this.setState( {hint: true} ) }>
                                     Click here for HINT
                                 </button>
-                            </p>
                         </div>
                     {
                         this.state.hint === true &&

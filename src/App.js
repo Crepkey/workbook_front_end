@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import './App.css';
 import QuestionTransporter from "./QuestionTransporter";
 import AddQuestion from './AddQuestion';
+import Button from "./components/button";
 
 
 function App() {
@@ -13,13 +14,13 @@ function App() {
         <Router>
             <div>
 
-                <button id="home-button" onClick={ ()=> {window.location.href='./'} }>Home</button>
-                <button id="add-question-button" onClick={ ()=> {window.location.href='./add-question'} }>Add new question</button>
-                <button id="learning-mode-button" onClick={ ()=> {window.location.href='./learning-mode'} }>Learning mode</button>
+                <Button id = "home-button"          color = 'turquoise-button'  href='./'>Home</Button>
+                <Button id = "add-question-button"  color = 'dark-blue-button'  href='./add-question'>Add new question</Button>
+                <Button id = "learning-mode-button" color = 'green-button'      href='./learning-mode'>Learning mode</Button>
 
-                <Route exact path="/" component={Home} />
-                <Route path="/add-question" component={AddAQuestion} />
-                <Route path="/learning-mode" component={LearningMode} />
+                <Route exact path="/"           component={Home} />
+                <Route path="/add-question"     component={AddAQuestion} />
+                <Route path="/learning-mode"    component={LearningMode} />
 
             </div>
         </Router>
@@ -32,7 +33,7 @@ function Home() {
     return (
         <div>
             <h1>Home</h1>
-            <h2 class="align-center">If you really hate learning the theoretical curriculum, you are in the right place</h2>
+            <h2 className="align-center">If you really hate learning the theoretical curriculum, you are in the right place</h2>
         </div>
     );
 }
