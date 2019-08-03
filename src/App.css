@@ -72,6 +72,10 @@ h2 {
   color: white;
 }
 
+input, label {
+  display: block;
+}
+
 #answer-border {
   border-style: solid;
   border-width: 1px;
