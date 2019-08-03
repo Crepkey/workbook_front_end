@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
+import './components/button'
+import Button from "./components/button";
 
 export default class AddQuestion extends Component {
 
@@ -34,29 +36,22 @@ export default class AddQuestion extends Component {
     render() {
         return (
             <div>
-                <p>
-                    <h1 className="App-header">ADD NEW QUESTION</h1>
-                </p>
+                <h1 className="App-header">ADD NEW QUESTION</h1>
 
                 <form onSubmit={this.handleSubmit}>
                     <p>
-                        <p>
-                            <label htmlFor="questionText">Enter new question</label>
-                        </p>
+                        <label htmlFor="questionText">Enter new question</label>
                         <textarea id="questionText" name="questionText"/>
                     </p>
 
                     <p>
-                        <p>
-                            <label htmlFor="answer">Enter the right answer</label>
-                        </p>
+                        <label htmlFor="answer">Enter the right answer</label>
                         <textarea id="answer" name="answer"/>
                     </p>
 
                     <p>
-                        <p>
-                            <label htmlFor="room">Choose room for the question</label>
-                        </p>
+
+                        <label htmlFor="room">Choose room for the question</label>
                         <select id="room" name="room">
                             <option value="PROGBASICS">Progbasics</option>
                             <option value="WEB">Web</option>
@@ -65,7 +60,7 @@ export default class AddQuestion extends Component {
                         </select>
                     </p>
 
-                    <button id="send-question">Send data!</button>
+                    <Button id="send-question" color="red-button">Send data!</Button>
                 </form>
             </div>
         );
