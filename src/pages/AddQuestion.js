@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import './App.css';
-import './components/button'
-import Button from "./components/button";
+import '../App.css';
+import Button from "../components/button";
 
 export default class AddQuestion extends Component {
 
