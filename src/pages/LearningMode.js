@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../App.css';
+import QuestionRating from "../components/QuestionRating";
 
 export default class learningMode extends Component{
 
@@ -56,6 +57,9 @@ export default class learningMode extends Component{
                     {
                         this.state.hint === true &&
                         <div id="answer-border">{this.state.answer}</div>
+                    }
+                    {
+                        this.state.hint === true && <QuestionRating/>
                     }
                 {this.state.error &&
                 <h3>{this.state.error}</h3>
