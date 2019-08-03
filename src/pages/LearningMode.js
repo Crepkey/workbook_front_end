@@ -48,7 +48,7 @@ export default class learningMode extends Component{
                     }
                         <div>
                                 <button id="check-solution"
-                                        className="red-button"
+                                        className="red-button margin-10px-from-all-direction"
                                         onClick={ () => this.setState( {hint: true} ) }>
                                     Click here for HINT
                                 </button>
