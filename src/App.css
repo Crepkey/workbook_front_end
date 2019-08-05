@@ -59,6 +59,20 @@
   text-align: center;
 }
 
+.light-blue-button{
+  padding: 5px 30px;
+  border: 1px solid #720005;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 1px 6px 12px #2ac5ff, inset -1px -10px 5px #0775d2, 1px 2px 1px black;
+  -moz-box-shadow: inset 1px 6px 12px #2ac5ff, inset -1px -10px 5px #0775d2, 1px 2px 1px black;
+  box-shadow: inset 1px 6px 12px #2ac5ff, inset -1px -10px 5px #0775d2, 1px 2px 1px black;
+  background-color: #0775d2;
+  font-size: large;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+}
+
 /*--------------------------------------------------MARGIN & ALIGN----------------------------------------------------*/
 
 .margin-10px-from-all-direction {
