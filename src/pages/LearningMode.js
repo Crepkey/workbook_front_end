@@ -56,7 +56,7 @@ export default class learningMode extends Component{
                         </div>
                     {
                         this.state.hint === true &&
-                        <div id="answer-border">{this.state.answer}</div>
+                        <div className="answer-border">{this.state.answer}</div>
                     }
                     {
                         this.state.hint === true && <QuestionRating/>

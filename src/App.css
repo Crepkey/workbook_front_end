@@ -96,7 +96,7 @@ input, label {
   display: block;
 }
 
-#answer-border {
+.answer-border {
   border-style: solid;
   border-width: 1px;
   border-color: #687bee;
@@ -111,7 +111,6 @@ body{
   background: #282c34 url("./static/large_logo_transparent.png") no-repeat center;
   height: 700px;
 }
-
 
 form{
   padding-left: 30px;
@@ -136,4 +135,9 @@ select {
 
 .align-center {
   text-align: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }
