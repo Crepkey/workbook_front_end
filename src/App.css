@@ -1,169 +1,171 @@
 /*-------------------------------------------------------BUTTONS------------------------------------------------------*/
 
 .turquoise-button {
-  float: right;
-  margin: 10px;
-  padding: 5px 30px;
-  border: 1px solid #1b5750;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 1px 6px 12px #2ea480, inset -1px -10px 5px #1c6f68, 1px 2px 1px black;
-  -moz-box-shadow: inset 1px 6px 12px #2ea480, inset -1px -10px 5px #1c6f68, 1px 2px 1px black;
-  box-shadow: inset 1px 6px 12px #2ea480, inset -1px -10px 5px #1c6f68, 1px 2px 1px black;
-  background-color: #1c6f68;
-  font-size: large;
-  color: white;
-  text-shadow: 1px 1px 1px black;
+    float: right;
+    margin: 10px;
+    padding: 5px 30px;
+    border: 1px solid #1b5750;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 1px 6px 12px #2ea480, inset -1px -10px 5px #1c6f68, 1px 2px 1px black;
+    -moz-box-shadow: inset 1px 6px 12px #2ea480, inset -1px -10px 5px #1c6f68, 1px 2px 1px black;
+    box-shadow: inset 1px 6px 12px #2ea480, inset -1px -10px 5px #1c6f68, 1px 2px 1px black;
+    background-color: #1c6f68;
+    font-size: large;
+    color: white;
+    text-shadow: 1px 1px 1px black;
 }
 
 .green-button {
-  float: left;
-  margin: 10px;
-  padding: 5px 30px;
-  border: 1px solid darkgreen;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen, 1px 2px 1px black;
-  -moz-box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen, 1px 2px 1px black;
-  box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen, 1px 2px 1px black;
-  background-color: green;
-  font-size: large;
-  color: white;
-  text-shadow: 1px 1px 1px black;
+    float: left;
+    margin: 10px;
+    padding: 5px 30px;
+    border: 1px solid darkgreen;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen, 1px 2px 1px black;
+    -moz-box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen, 1px 2px 1px black;
+    box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen, 1px 2px 1px black;
+    background-color: green;
+    font-size: large;
+    color: white;
+    text-shadow: 1px 1px 1px black;
 }
 
-.dark-blue-button{
-  float: left;
-  margin: 10px;
-  padding: 5px 30px;
-  border: 1px solid #040064;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 1px 6px 12px #687bee, inset -1px -10px 5px #1e0c64, 1px 2px 1px black;
-  -moz-box-shadow: inset 1px 6px 12px #687bee, inset -1px -10px 5px #1e0c64, 1px 2px 1px black;
-  box-shadow: inset 1px 6px 12px #687bee, inset -1px -10px 5px #1e0c64, 1px 2px 1px black;
-  background-color: #1e0c64;
-  font-size: large;
-  color: white;
-  text-shadow: 1px 1px 1px black;
+.dark-blue-button {
+    float: left;
+    margin: 10px;
+    padding: 5px 30px;
+    border: 1px solid #040064;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 1px 6px 12px #687bee, inset -1px -10px 5px #1e0c64, 1px 2px 1px black;
+    -moz-box-shadow: inset 1px 6px 12px #687bee, inset -1px -10px 5px #1e0c64, 1px 2px 1px black;
+    box-shadow: inset 1px 6px 12px #687bee, inset -1px -10px 5px #1e0c64, 1px 2px 1px black;
+    background-color: #1e0c64;
+    font-size: large;
+    color: white;
+    text-shadow: 1px 1px 1px black;
 }
 
-.red-button{
-  padding: 5px 30px;
-  border: 1px solid #720005;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 1px 6px 12px #ee5057, inset -1px -10px 5px #8e0b08, 1px 2px 1px black;
-  -moz-box-shadow: inset 1px 6px 12px #ee5057, inset -1px -10px 5px #8e0b08, 1px 2px 1px black;
-  box-shadow: inset 1px 6px 12px #ee5057, inset -1px -10px 5px #8e0b08, 1px 2px 1px black;
-  background-color: #8e0b08;
-  font-size: large;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
+.red-button {
+    padding: 5px 30px;
+    border: 1px solid #720005;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 1px 6px 12px #ee5057, inset -1px -10px 5px #8e0b08, 1px 2px 1px black;
+    -moz-box-shadow: inset 1px 6px 12px #ee5057, inset -1px -10px 5px #8e0b08, 1px 2px 1px black;
+    box-shadow: inset 1px 6px 12px #ee5057, inset -1px -10px 5px #8e0b08, 1px 2px 1px black;
+    background-color: #8e0b08;
+    font-size: large;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
 }
 
-.light-blue-button{
-  margin: 10px;
-  padding: 5px 30px;
-  border: 1px solid #720005;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 1px 6px 12px #2ac5ff, inset -1px -10px 5px #0775d2, 1px 2px 1px black;
-  -moz-box-shadow: inset 1px 6px 12px #2ac5ff, inset -1px -10px 5px #0775d2, 1px 2px 1px black;
-  box-shadow: inset 1px 6px 12px #2ac5ff, inset -1px -10px 5px #0775d2, 1px 2px 1px black;
-  background-color: #0775d2;
-  font-size: large;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
+.light-blue-button {
+    margin: 10px;
+    padding: 5px 30px;
+    border: 1px solid #720005;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 1px 6px 12px #2ac5ff, inset -1px -10px 5px #0775d2, 1px 2px 1px black;
+    -moz-box-shadow: inset 1px 6px 12px #2ac5ff, inset -1px -10px 5px #0775d2, 1px 2px 1px black;
+    box-shadow: inset 1px 6px 12px #2ac5ff, inset -1px -10px 5px #0775d2, 1px 2px 1px black;
+    background-color: #0775d2;
+    font-size: large;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
 }
 
 /*--------------------------------------------------MARGIN & ALIGN----------------------------------------------------*/
 
 .margin-10px-from-all-direction {
-  margin: 10px;
+    margin: 10px;
 }
 
 /*--------------------------------------------------QUESTION RATING---------------------------------------------------*/
 
 #img-right {
-  position: absolute;
-  right: 500px;
-  width: 75px;
+    position: absolute;
+    right: 500px;
+    width: 75px;
 }
 
 #img-left {
-  position: absolute;
-  left: 500px;
-  width: 75px;
+    position: absolute;
+    left: 500px;
+    width: 75px;
 }
 
 /*------------------------------------------------------OTHERS--------------------------------------------------------*/
 
 h1 {
-  padding: 80px;
-  text-align: center;
-  color: white;
+    padding: 20px;
+    text-align: center;
+    color: white;
 }
 
 h2 {
-  margin: 10px;
-  color: white;
+    margin: 10px;
+    color: white;
 }
 
 input, label {
-  display: block;
+    display: block;
 }
 
 .answer-border {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #687bee;
-  border-radius: 50px;
-  color: white;
-  font-size: x-large;
-  padding: 20px;
-  margin: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #687bee;
+    border-radius: 50px;
+    color: white;
+    font-size: x-large;
+    padding: 20px;
+    margin: 20px;
 }
 
 .question-title-border {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #687bee;
-  border-radius: 25px;
-  color: white;
-  font-size: x-large;
-  padding: 20px;
-  margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #687bee;
+    border-radius: 25px;
+    color: white;
+    font-size: x-large;
+    padding: 10px;
+    margin: 20px;
 }
 
-body{
-  background: #282c34 url("./static/large_logo_transparent.png") no-repeat center;
-  height: 700px;
+body {
+    background: #282c34 url("./static/large_logo_transparent.png") no-repeat center;
+    height: 700px;
 }
 
-form{
-  padding-left: 30px;
-  text-align: left;
-  color: white;
+form {
+    padding-left: 30px;
+    text-align: left;
+    color: white;
 
 }
 
 textarea {
-  border-style: solid;
-  border-width: 3px;
-  border-color: #687bee;
-  border-radius: 1px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #687bee;
+    border-radius: 1px;
 }
 
 select {
-  border-style: solid;
-  border-width: 3px;
-  border-color: #ee0023;
-  border-radius: 3px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #ee0023;
+    border-radius: 3px;
 }
 
 .align-center {
-  text-align: center;
+    text-align: center;
 }
 
 #root {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }

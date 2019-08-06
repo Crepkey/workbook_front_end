@@ -22,8 +22,11 @@ export default class QuestionManagement extends Component{
     render() {
         return (
             <div>
+                <h1>Question Managment</h1>
                 <QuestionFilter/>
+
                 <Button color="light-blue-button" href="./add-question">Add new question</Button>
+
                 {this.state.questions.map(question => <QuestionTitle key={question.ID} title={question.title}/>)}
             </div>
         )
