@@ -9,6 +9,7 @@ import QuestionManagement from './pages/QuestionManagement';
 import Button from "./components/button";
 import Home from "./pages/Home"
 import AddQuestion from "./pages/AddQuestion";
+import EditQuestion from "./pages/EditQuestion";
 
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
                 <Route exact path="/"               component={ () => <Home/> } />
                 <Route path="/question-management"  component={ () => <QuestionManagement/> } />
                 <Route path="/add-question"         component={ () => <AddQuestion/> } />
+                <Route path="/edit-question"         component={ () => <EditQuestion/> } />
                 <Route path="/learning-mode"        component={ () => <LearningMode/> } />
             </div>
         </Router>

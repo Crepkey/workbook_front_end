@@ -10,7 +10,7 @@ export default class QuestionTitle extends Component{
                     {this.props.title}
                     </span>
                 </h3>
-                <Button id="edit-button" color = "red-button">
+                <Button id="edit-button" color = "red-button" href="./edit-question">
                     Edit
                 </Button>
             </div>
