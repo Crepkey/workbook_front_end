@@ -11,7 +11,9 @@ export default class EditQuestion extends Component {
                 apiAddress="http://localhost:8080/question/add"
                 formTitle="Edit Question"
                 questionFieldLabel="Question"
-                answerFieldLabel="Answer"
+                rightAnswerFieldLabel="Right answer"
+                wrongAnswersFieldsLabel="Edit wrong answer here"
+                tagsDropdownLabel="Select tags"
                 roomDropdownLabel="Room"
                 submitButtonText="Save"
             />
