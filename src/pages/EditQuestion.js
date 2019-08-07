@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import '../App.css';
-import Button from "../components/button";
 import QuestionForm from "../components/QuestionForm";
 
 export default class EditQuestion extends Component {
