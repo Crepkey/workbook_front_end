@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import Button from "./button";
 
 export default class QuestionForm extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.state={
+        this.state = {
             apiAddress: this.props.apiAddress,
             formTitle: this.props.formTitle,
             questionFieldLabel: this.props.questionFieldLabel,
@@ -17,15 +17,36 @@ export default class QuestionForm extends Component {
         }
     }
 
-    handleSubmit(event){
+    handleSubmit(event) {
         event.preventDefault();
         const formData = new FormData(event.target);
 
         let jsonData = {};
 
+        let answers = [];
+        let tags = [];
+
         for (const [key, value] of formData) {
+            console.log(key + ":" + value);
+            if (key === "rightAnswerText") {
+                answers.push(
+                    {"answerText": value, "rightAnswer": true}
+                )
+            }
+            else if (key === "answerText") {
+                answers.push(
+                    { "answerText": value, "rightAnswer": false}
+                )
+            }
+            else if (key === "tags") {
+                tags.push(value)
+            }
             jsonData[key] = value;
         }
+
+        jsonData["answers"]=answers;
+        jsonData["tags"]=tags;
+        console.log(jsonData);
 
         fetch(this.state.apiAddress, {
             method: 'POST',
@@ -53,7 +74,7 @@ export default class QuestionForm extends Component {
                     {/*Right answer*/}
                     <p>
                         <label htmlFor="answer">{this.state.rightAnswerFieldLabel}</label>
-                        <textarea id="rightAnswer" name="answerText"/>
+                        <textarea id="rightAnswer" name="rightAnswerText"/>
                     </p>
                     {/*Wrong answer 1*/}
                     <p>
