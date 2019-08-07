@@ -9,7 +9,9 @@ export default class QuestionForm extends Component {
             apiAddress: this.props.apiAddress,
             formTitle: this.props.formTitle,
             questionFieldLabel: this.props.questionFieldLabel,
-            answerFieldLabel: this.props.answerFieldLabel,
+            rightAnswerFieldLabel: this.props.rightAnswerFieldLabel,
+            wrongAnswersFieldsLabel: this.props.wrongAnswersFieldsLabel,
+            tagsDropdownLabel: this.props.tagsDropdownLabel,
             roomDropdownLabel: this.props.roomDropdownLabel,
             submitButtonText: this.props.submitButtonText
         }
@@ -48,12 +50,37 @@ export default class QuestionForm extends Component {
                         <label htmlFor="questionText">{this.state.questionFieldLabel}</label>
                         <textarea id="questionText" name="questionText"/>
                     </p>
-
+                    {/*Right answer*/}
                     <p>
-                        <label htmlFor="answer">{this.state.answerFieldLabel}</label>
-                        <textarea id="answer" name="answer"/>
+                        <label htmlFor="answer">{this.state.rightAnswerFieldLabel}</label>
+                        <textarea id="rightAnswer" name="answerText"/>
                     </p>
-
+                    {/*Wrong answer 1*/}
+                    <p>
+                        <label htmlFor="answer">{this.state.wrongAnswersFieldsLabel}</label>
+                        <textarea id="wrongAnswer-1" name="answerText"/>
+                    </p>
+                    {/*Wrong answer 2*/}
+                    <p>
+                        <label htmlFor="answer">{this.state.wrongAnswersFieldsLabel}</label>
+                        <textarea id="wrongAnswer-2" name="answerText"/>
+                    </p>
+                    {/*Wrong answer 3*/}
+                    <p>
+                        <label htmlFor="answer">{this.state.wrongAnswersFieldsLabel}</label>
+                        <textarea id="wrongAnswer-3" name="answerText"/>
+                    </p>
+                    {/*Tags*/}
+                    <p>
+                        <label htmlFor="room">{this.state.tagsDropdownLabel}</label>
+                        <select id="tags" name="tags">
+                            <option value="JAVA">JAVA</option>
+                            <option value="OOP">OOP</option>
+                            <option value="PYTHON">PYTHON</option>
+                            <option value="WEB">WEB</option>
+                        </select>
+                    </p>
+                    {/*Rooms*/}
                     <p>
                         <label htmlFor="room">{this.state.roomDropdownLabel}</label>
                         <select id="room" name="room">
