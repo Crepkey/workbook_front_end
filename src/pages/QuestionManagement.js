@@ -9,15 +9,20 @@ import QuestionTitle from "../components/QuestionTitle";
 export default class QuestionManagement extends Component{
 
     state={
-        questions : [
-            {ID : 1, title: "This is a sample text which represents the title of a question"},
-            {ID : 2, title: "This is a sample text which represents the title of a question"},
-            {ID : 3, title: "This is a sample text which represents the title of a question"},
-            {ID : 4, title: "This is a sample text which represents the title of a question"},
-            {ID : 5, title: "This is a sample text which represents the title of a question"},
-            {ID : 6, title: "This is a sample text which represents the title of a question"}
-        ]
+        questions : []
     };
+
+
+    componentDidMount() {
+        let url = 'http://localhost:8080/question/random-question-list';
+        fetch(url)
+            .then(response => response.json())
+            .then(data => this.setState({questions:data }))
+            .catch(error => {
+                this.setState({error});
+            })
+    }
+
 
     render() {
         return (
@@ -27,7 +32,7 @@ export default class QuestionManagement extends Component{
 
                 <Button color="light-blue-button" href="./add-question">Add new question</Button>
 
-                {this.state.questions.map(question => <QuestionTitle key={question.ID} title={question.title}/>)}
+                {this.state.questions.map(question => <QuestionTitle key={question.questionID} title={question.questionText}/>)}
             </div>
         )
     }
