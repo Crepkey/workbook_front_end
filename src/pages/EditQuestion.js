@@ -1,14 +1,22 @@
 import React, {Component} from 'react';
+
 import '../App.css';
 import QuestionForm from "../components/QuestionForm";
 
-export default class EditQuestion extends Component {
+export default class EditQuestion extends React.Component {
+
+    componentDidMount() {
+        const questionID = this.props.match.params;
+        console.log(questionID)
+    }
+
+
 
 
     render() {
         return (
             <QuestionForm
-                apiAddress="http://localhost:8080/question/add"
+                apiAddress={"http://localhost:8080/question/id/"}
                 formTitle="Edit Question"
                 questionFieldLabel="Question"
                 rightAnswerFieldLabel="Right answer"

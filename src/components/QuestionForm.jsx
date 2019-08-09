@@ -17,6 +17,10 @@ export default class QuestionForm extends Component {
         }
     }
 
+    componentDidMount() {
+        console.log(this.state.apiAddress)
+    }
+
     handleSubmit(event) {
         event.preventDefault();
         const formData = new FormData(event.target);

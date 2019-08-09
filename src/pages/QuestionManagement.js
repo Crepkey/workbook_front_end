@@ -32,7 +32,7 @@ export default class QuestionManagement extends Component{
 
                 <Button color="light-blue-button" href="./add-question">Add new question</Button>
 
-                {this.state.questions.map(question => <QuestionTitle key={question.questionID} title={question.questionText}/>)}
+                {this.state.questions.map(question => <QuestionTitle key={question.questionID} question={question}/>)}
             </div>
         )
     }
