@@ -4,15 +4,6 @@ import '../App.css';
 import QuestionForm from "../components/QuestionForm";
 
 export default class EditQuestion extends React.Component {
-
-    componentDidMount() {
-        const questionID = this.props.match.params;
-        console.log(questionID)
-    }
-
-
-
-
     render() {
         return (
             <QuestionForm
