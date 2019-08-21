@@ -10,6 +10,7 @@ import Button from "./components/button";
 import Home from "./pages/Home"
 import AddQuestion from "./pages/AddQuestion";
 import EditQuestion from "./pages/EditQuestion";
+import Login from "./pages/Login";
 
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
                 <Route path="/add-question"         component={ () => <AddQuestion/> } />
                 <Route path="/edit-question/:qID"   component={ () => <EditQuestion/> } />
                 <Route path="/learning-mode"        component={ () => <LearningMode/> } />
+                <Route path="/login"                component={ () => <Login/> } />
             </div>
         </Router>
     );
