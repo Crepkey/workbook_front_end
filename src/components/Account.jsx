@@ -20,15 +20,12 @@ export default class Account extends Component {
             jsonData[key]=value
         }
 
-        console.log(jsonData);
-
         fetch(this.state.apiAddress, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
             },
-
             body: JSON.stringify(jsonData)
         }).then(res => res.json())
             .then(response => window.sessionStorage.accessToken = JSON.stringify(response.accessToken))
