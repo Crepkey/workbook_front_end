@@ -20,6 +20,7 @@ export default function App() {
                 <Button id = "home-button"          color = 'turquoise-button'  href='./'>Home</Button>
                 <Button id = "add-question-button"  color = 'dark-blue-button'  href='./question-management'>Question Management</Button>
                 <Button id = "learning-mode-button" color = 'green-button'      href='./learning-mode'>Learning mode</Button>
+                <Button id = "login-button"         color = 'light-blue-button' href='./login'>Login</Button>
             </div>
             <div>
                 <Route exact path="/"               component={ () => <Home/> } />
