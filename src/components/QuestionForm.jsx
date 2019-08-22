@@ -56,7 +56,8 @@ export default class QuestionForm extends Component {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer '+ window.sessionStorage.accessToken
             },
 
             body: JSON.stringify(jsonData)

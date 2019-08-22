@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Redirect} from 'react-router-dom'
 
 
 export default class Account extends Component {
@@ -8,6 +9,12 @@ export default class Account extends Component {
         this.state = {
             apiAddress : this.props.apiAddress
         }
+    }
+
+    handleResponse(response) {
+        window.sessionStorage.accessToken = response.accessToken;
+        window.sessionStorage.roles = response.roles;
+        alert("You has been logged in")
     }
 
     handleSubmit(event) {
@@ -28,7 +35,7 @@ export default class Account extends Component {
             },
             body: JSON.stringify(jsonData)
         }).then(res => res.json())
-            .then(response => window.sessionStorage.accessToken = JSON.stringify(response.accessToken))
+            .then(response => this.handleResponse(response))
             .catch(error => console.error('Error:', error));
     }
 

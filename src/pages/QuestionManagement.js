@@ -16,7 +16,13 @@ export default class QuestionManagement extends Component{
 
     componentDidMount() {
         let url = 'http://localhost:8080/question/random-question-list';
-        fetch(url)
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer '+ window.sessionStorage.accessToken
+            }
+        })
             .then(response => response.json())
             .then(data => this.setState({questions:data }))
             .catch(error => {
@@ -31,7 +37,7 @@ export default class QuestionManagement extends Component{
                 <h1>Question Managment</h1>
                 <QuestionFilter/>
 
-                <Button color="light-blue-button" href="./add-question">Add new question</Button>
+                <Button color="light-blue-button" href="/add-question">Add new question</Button>
 
                 {this.state.questions.map(question => <QuestionTitle key={question.questionID} question={question}/>)}
             </div>

@@ -27,7 +27,13 @@ export default class learningMode extends Component {
 
     componentDidMount() {
         let url = 'http://localhost:8080/question/random';
-        fetch(url)
+        fetch(url, {
+                    method: 'GET',
+                    headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer ' + window.sessionStorage.accessToken
+                            }
+                    })
             .then(response => response.json())
             .then(this.buildState)
             .catch(error => {
