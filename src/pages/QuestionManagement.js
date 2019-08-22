@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 /*Components*/
 
 import QuestionFilter from "../components/QuestionFilter";
-import Button from "../components/button";
+import Button from "../components/Button";
 import QuestionTitle from "../components/QuestionTitle";
 
 

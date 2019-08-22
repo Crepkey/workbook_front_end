@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Button from "./button";
+import Button from "./Button";
 
 export default class QuestionForm extends Component {
     constructor(props) {
