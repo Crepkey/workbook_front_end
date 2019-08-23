@@ -12,7 +12,7 @@ export default class Account extends Component {
 
     handleResponse(response) {
         window.sessionStorage.accessToken = response.accessToken;
-        window.sessionStorage.roles = response.roles;
+        response.roles.forEach( role => sessionStorage.setItem(role, 'true'));
         alert("You has been logged in")
     }
 
