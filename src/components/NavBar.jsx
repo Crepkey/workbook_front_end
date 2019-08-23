@@ -9,7 +9,7 @@ export default class NavBar extends Component {
             <div>
                 <Button id = "home-button"              color = 'turquoise-button'  href='./'>Home</Button>
                 {
-                    window.sessionStorage.roles === "ROLE_ADMIN,ROLE_USER" &&
+                    window.sessionStorage.ROLE_ADMIN &&
                     <Button id = "add-question-button"  color = 'dark-blue-button'  href='./question-management'>Question Management</Button>
                 }
                 {
