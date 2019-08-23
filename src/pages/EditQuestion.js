@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import '../App.css';
+import '../static/css/App.css';
 import QuestionForm from "../components/QuestionForm";
 
 export default class EditQuestion extends React.Component {

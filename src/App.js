@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './App.css';
+import './static/css/App.css';
 
 import Controller from "./Controller/Controller";
 import NavBar from "./components/NavBar";

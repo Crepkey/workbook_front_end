@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import checkSymbol from '../static/check_symbol.png'
-import repeatSymbol from '../static/repeat_symbol.png'
+import checkSymbol from '../static/img/check_symbol.png'
+import repeatSymbol from '../static/img/repeat_symbol.png'
 
 
 export default class QuestionRating extends Component {

@@ -136,7 +136,7 @@ input, label {
 }
 
 body {
-    background: #282c34 url("./static/large_logo_transparent.png") no-repeat center;
+    background: #282c34 url("../img/large_logo_transparent.png") no-repeat center;
     height: 700px;
 }
 

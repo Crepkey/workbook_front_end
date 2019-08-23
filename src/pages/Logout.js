@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../App.css';
+import '../static/css/App.css';
 
 
 export default class Logout extends Component {

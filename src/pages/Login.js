@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 
-import '../App.css';
+import '../static/css/App.css';
 
 import Account from "../components/Account";
 

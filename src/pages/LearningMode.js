@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../App.css';
+import '../static/css/App.css';
 import QuestionRating from "../components/QuestionRating";
 
 export default class learningMode extends Component {
