@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import Util from "../Util/Util";
 
 
 export default class Account extends Component {
+
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,26 +18,31 @@ export default class Account extends Component {
         alert("You has been logged in")
     }
 
-    handleSubmit(event) {
-        event.preventDefault();
-        const formData = new FormData(event.target);
-
-        let jsonData = {};
-
-        for (const [key, value] of formData) {
-            jsonData[key]=value
-        }
-
-        fetch(this.state.apiAddress, {
+    createJSON(formData) {
+        let json = {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(jsonData)
-        }).then(res => res.json())
-            .then(response => this.handleResponse(response))
-            .catch(error => console.error('Error:', error));
+            }
+        };
+
+        let jsonBody = {};
+        for (const [key, value] of formData) {
+            jsonBody[key] = value
+        }
+        json['body'] = JSON.stringify(jsonBody);
+
+        return json
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        let requestJSON = this.createJSON(formData);
+
+        Util.fetchFromURL(this.state.apiAddress, requestJSON).then(response => this.handleResponse(response))
     }
 
     render() {
