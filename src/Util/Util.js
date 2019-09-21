@@ -9,8 +9,8 @@ export default class Util {
         }
     }
 
-    static async fetchFromURL(url, json) {
-        return await fetch(url, json)
+    static fetchFromURL(url, json) {
+        return fetch(url, json)
             .then(response => response.json())
             .catch(error => console.log(error));
     }

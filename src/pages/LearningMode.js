@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../static/css/App.css';
 import QuestionRating from "../components/QuestionRating";
+import Util from "../Util/Util";
 
 export default class learningMode extends Component {
     state = {
@@ -27,18 +28,16 @@ export default class learningMode extends Component {
 
     componentDidMount() {
         let url = 'http://localhost:8080/question/random';
-        fetch(url, {
-                    method: 'GET',
-                    headers: {
-                            'Content-Type': 'application/json',
-                            'Authorization': 'Bearer ' + window.sessionStorage.accessToken
-                            }
-                    })
-            .then(response => response.json())
-            .then(this.buildState)
-            .catch(error => {
-                this.setState({error});
-            })
+        let json = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + window.sessionStorage.accessToken
+            }
+        };
+
+        //TODO Ask Balázs about this solution
+        Util.fetchFromURL(url, json).then(data => this.buildState(data));
     }
 
     render() {
