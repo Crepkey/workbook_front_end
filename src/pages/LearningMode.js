@@ -23,7 +23,7 @@ export default class learningMode extends Component {
         /*Set Answer*/
 
         data.answers.filter(answer => answer.rightAnswer)
-            .map(rightAnswer =>  this.setState({answer: rightAnswer.answerText}));
+            .map(rightAnswer => this.setState({answer: rightAnswer.answerText}));
     };
 
     componentDidMount() {

@@ -3,8 +3,6 @@ import Button from "./Button";
 
 export default class QuestionTitle extends Component{
 
-
-
     render() {
         return(
             <div className="question-title-border">
@@ -13,7 +11,7 @@ export default class QuestionTitle extends Component{
                         {this.props.question.questionText}
                     </span>
                 </h3>
-                <Button id="edit-button" color = "red-button" href={"./edit-question" + "/" + this.props.question.questionID}>
+                <Button id="edit-button" color = "red-button" href={"./edit-question/" + this.props.question.questionID}>
                     Edit
                 </Button>
             </div>
