@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Button from "./Button";
+import Util from "../Util/Util";
 
 export default class QuestionForm extends Component {
     constructor(props) {
@@ -18,7 +19,7 @@ export default class QuestionForm extends Component {
     }
 
     componentDidMount() {
-        console.log(this.state.apiAddress)
+
     }
 
     createJSON(formData) {
@@ -64,14 +65,12 @@ export default class QuestionForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const formData = new FormData(event.target);
 
+        const formData = new FormData(event.target);
         let requestJSON = this.createJSON(formData);
 
-        fetch(this.state.apiAddress, requestJSON).then(res => res.json())
-            .then(response => console.log('Success:', JSON.stringify(response)))
-            .catch(error => console.error('Error:', error))
-    };
+        Util.fetchFromURL(this.state.apiAddress, requestJSON).then(() => alert("The Question has been saved"))
+    }
 
     render() {
         return (
