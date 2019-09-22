@@ -21,47 +21,54 @@ export default class QuestionForm extends Component {
         console.log(this.state.apiAddress)
     }
 
-    handleSubmit(event) {
-        event.preventDefault();
-        const formData = new FormData(event.target);
+    createJSON(formData) {
 
-        let jsonData = {};
+        /*--Header---*/
 
-        let answers = [];
-        let tags = [];
-
-        for (const [key, value] of formData) {
-            console.log(key + ":" + value);
-            if (key === "rightAnswerText") {
-                answers.push(
-                    {"answerText": value, "rightAnswer": true}
-                )
-            }
-            else if (key === "answerText") {
-                answers.push(
-                    { "answerText": value, "rightAnswer": false}
-                )
-            }
-            else if (key === "tags") {
-                tags.push(value)
-            }
-            jsonData[key] = value;
-        }
-
-        jsonData["answers"]=answers;
-        jsonData["tags"]=tags;
-        console.log(jsonData);
-
-        fetch(this.state.apiAddress, {
+        let json = {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer '+ window.sessionStorage.accessToken
-            },
+                'Authorization': 'Bearer ' + window.sessionStorage.accessToken
+            }
+        };
 
-            body: JSON.stringify(jsonData)
-        }).then(res => res.json())
+        /*---Body---*/
+
+        let jsonBody = {};
+        let answers = [];
+        let tags = [];
+
+        for (const [key, value] of formData) {
+            if (key === "rightAnswerText") {
+                answers.push(
+                    {"answerText": value, "rightAnswer": true}
+                )
+            } else if (key === "answerText") {
+                answers.push(
+                    {"answerText": value, "rightAnswer": false}
+                )
+            } else if (key === "tags") {
+                tags.push(value)
+            }
+            jsonBody[key] = value;
+        }
+
+        jsonBody["answers"] = answers;
+        jsonBody["tags"] = tags;
+        json['body'] = JSON.stringify(jsonBody);
+
+        return json
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+
+        let requestJSON = this.createJSON(formData);
+
+        fetch(this.state.apiAddress, requestJSON).then(res => res.json())
             .then(response => console.log('Success:', JSON.stringify(response)))
             .catch(error => console.error('Error:', error))
     };
