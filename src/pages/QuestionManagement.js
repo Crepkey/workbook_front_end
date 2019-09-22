@@ -5,6 +5,7 @@ import React, {Component} from 'react';
 import QuestionFilter from "../components/QuestionFilter";
 import Button from "../components/Button";
 import QuestionTitle from "../components/QuestionTitle";
+import Util from "../Util/Util";
 
 
 export default class QuestionManagement extends Component{
@@ -16,25 +17,24 @@ export default class QuestionManagement extends Component{
 
     componentDidMount() {
         let url = 'http://localhost:8080/question/random-question-list';
-        fetch(url, {
+        let json = {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer '+ window.sessionStorage.accessToken
+                'Authorization': 'Bearer ' + window.sessionStorage.accessToken
             }
-        })
-            .then(response => response.json())
-            .then(data => this.setState({questions:data }))
-            .catch(error => {
-                this.setState({error});
-            })
+        };
+
+        Util.fetchFromURL(url, json)
+            .then(data => this.setState({questions: data}))
+            .catch(error => console.log(error))
     }
 
 
     render() {
         return (
             <div>
-                <h1>Question Managment</h1>
+                <h1>Question Management</h1>
                 <QuestionFilter/>
 
                 <Button color="light-blue-button" href="/add-question">Add new question</Button>
