@@ -18,7 +18,7 @@ export default function Controller(){
                 <Route exact path="/"               component={ Home }                 />
                 <Route path="/question-management"  component={ QuestionManagement }   />
                 <Route path="/add-question"         component={ AddQuestion }          />
-                <Route path="/edit-question/:qID"   component={ EditQuestion }         />
+                <Route path="/edit-question/:ID"   component={ EditQuestion }         />
                 <Route path="/learning-mode"        component={ LearningMode }         />
                 <Route path="/login"                component={ Login }                />
                 <Route path="/logout"               component={ Logout }               />

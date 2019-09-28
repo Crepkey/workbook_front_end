@@ -18,10 +18,6 @@ export default class QuestionForm extends Component {
         }
     }
 
-    componentDidMount() {
-
-    }
-
     createJSON(formData) {
 
         /*--Header---*/
@@ -72,6 +68,7 @@ export default class QuestionForm extends Component {
         Util.fetchFromURL(this.state.apiAddress, requestJSON).then(() => alert("The Question has been saved"))
     }
 
+
     render() {
         return (
             <div>
@@ -80,12 +77,16 @@ export default class QuestionForm extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <p>
                         <label htmlFor="questionText">{this.state.questionFieldLabel}</label>
-                        <textarea id="questionText" name="questionText"/>
+                        <textarea id="questionText"
+                                  name="questionText"
+                        />
                     </p>
                     {/*Right answer*/}
                     <p>
                         <label htmlFor="answer">{this.state.rightAnswerFieldLabel}</label>
-                        <textarea id="rightAnswer" name="rightAnswerText"/>
+                        <textarea id="rightAnswer"
+                                  name="rightAnswerText"
+                        />
                     </p>
                     {/*Wrong answer 1*/}
                     <p>

@@ -7,6 +7,7 @@ export default class EditQuestion extends React.Component {
     render() {
         return (
             <QuestionForm
+                questionID={this.props.match.params.ID}
                 apiAddress={"http://localhost:8080/question/id/"}
                 formTitle="Edit Question"
                 questionFieldLabel="Question"
