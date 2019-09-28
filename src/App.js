@@ -1,14 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import QuestionTransporter from "./QuestionTransporter";
 
-function App() {
-  return (
-   <div>
-     <QuestionTransporter/>
-   </div>
-  );
+import './static/css/App.css';
+
+import Controller from "./Controller/Controller";
+import NavBar from "./components/NavBar";
+
+
+export default function App() {
+    return (
+            <div>
+                <NavBar/>
+                <Controller/>
+            </div>
+    );
 }
 
-export default App;
